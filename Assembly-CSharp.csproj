@@ -62,6 +62,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\WindArea.cs" />
     <Compile Include="Assets\Scripts\EnvironmentManager.cs" />
+    <Compile Include="Assets\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\Missile.cs" />
   </ItemGroup>
   <ItemGroup>
