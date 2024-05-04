@@ -6,7 +6,10 @@ public class Missile : MonoBehaviour
 {
 
     public GameObject missileMotor;
+    public GameObject missileHead;
+    public GameObject target;
 
+    public float blastRadius = 20; //m
     public float missileMotorForce = 10_000f;
     public float heatTransferCoefficient = 57.0f;
     public float aluminumSpecificHeatCapacity = 900.0f;
@@ -14,14 +17,13 @@ public class Missile : MonoBehaviour
     public float fuelMass = 105.49f; // KG
     public float specificImpulse = 250; // s
 
-    public GameObject target;
-    public Vector3 forceDirection;
 
     private float surfaceTemperature;
     private float fixedDeltaTime;
     private float burnRateSeconds; // KG/s
     private float burnRate; // KG/fixed_update_tick
     private Rigidbody rb;
+    public Vector3 forceDirection;
 
     EnvironmentManager envManager;
 
@@ -61,7 +63,10 @@ public class Missile : MonoBehaviour
         if (fuelMass < 0) { fuelMass = 0; }
         else
         {
-            rb.AddForceAtPosition(forceDirection.normalized * missileMotorForce, missileMotor.transform.position);
+            forceDirection = (target.transform.position - missileHead.transform.position).normalized;
+
+            // Clamp the force direction
+            rb.AddForceAtPosition(forceDirection * missileMotorForce, missileMotor.transform.position);
         }
 
 
