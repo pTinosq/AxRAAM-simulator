@@ -8,13 +8,19 @@ public class Missile : MonoBehaviour
     public GameObject missileMotor;
 
     public float missileMotorForce = 10_000f;
-    public float heatTransferCoefficient = 57.0f;  // Heat transfer coefficient 
-    public float aluminumSpecificHeatCapacity = 900.0f;  // Specific heat capacity of aluminum
-    public float missileMass = 45.21f;
-    public float fuelMass = 105.49f;
+    public float heatTransferCoefficient = 57.0f;
+    public float aluminumSpecificHeatCapacity = 900.0f;
+    public float missileMass = 45.21f; // KG
+    public float fuelMass = 105.49f; // KG
+    public float specificImpulse = 250; // s
+
+    public GameObject target;
+    public Vector3 forceDirection;
 
     private float surfaceTemperature;
     private float fixedDeltaTime;
+    private float burnRateSeconds; // KG/s
+    private float burnRate; // KG/fixed_update_tick
     private Rigidbody rb;
 
     EnvironmentManager envManager;
@@ -25,6 +31,8 @@ public class Missile : MonoBehaviour
         rb = gameObject.GetComponent<Rigidbody>();
         envManager = GameObject.FindGameObjectWithTag("Environment").GetComponent<EnvironmentManager>();
         surfaceTemperature = envManager.GetTemperatureAtAltitude(transform.position.y);
+        burnRateSeconds = CalculateBurnRate(specificImpulse, missileMotorForce, envManager.gravity);
+        burnRate = burnRateSeconds * Time.fixedDeltaTime;
 
         rb.mass = missileMass + fuelMass;
     }
@@ -42,16 +50,28 @@ public class Missile : MonoBehaviour
 
         if (Input.GetKey(KeyCode.Space))
         {
-            Debug.Log("Space!");
             ApplyForceFromMotor();
         }
     }
 
     void ApplyForceFromMotor()
     {
-        // Assuming the missile motor is at the back of the missile and force is applied forward
-        Vector3 forceDirection = missileMotor.transform.forward;  // Direction of force
-        rb.AddForceAtPosition(forceDirection * missileMotorForce, missileMotor.transform.position);
-        Debug.Log("lesgo!");
+        // Apply burn rate to missile fuel
+        fuelMass -= burnRate;
+        if (fuelMass < 0) { fuelMass = 0; }
+        else
+        {
+            rb.AddForceAtPosition(forceDirection.normalized * missileMotorForce, missileMotor.transform.position);
+        }
+
+
+    }
+
+    float CalculateBurnRate(float specificImpulse, float thrust, float gravitationalAcceleration)
+    {
+        // mdot = F / (I_sp * g_0)
+        // \dot{m} = \frac{F}{I_{sp} \times g_0}
+
+        return thrust / (specificImpulse * gravitationalAcceleration);
     }
 }

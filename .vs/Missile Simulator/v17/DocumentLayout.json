@@ -5,18 +5,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{312F1415-6A4D-D85E-EB94-83458466563D}|Assembly-CSharp.csproj|c:\\users\\tinos\\missile simulator\\assets\\scripts\\missile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{312F1415-6A4D-D85E-EB94-83458466563D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\missile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{312F1415-6A4D-D85E-EB94-83458466563D}|Assembly-CSharp.csproj|C:\\Users\\tinos\\Missile Simulator\\assets\\scripts\\windarea.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{312F1415-6A4D-D85E-EB94-83458466563D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\windarea.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{312F1415-6A4D-D85E-EB94-83458466563D}|Assembly-CSharp.csproj|C:\\Users\\tinos\\Missile Simulator\\assets\\scripts\\environmentmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{312F1415-6A4D-D85E-EB94-83458466563D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\environmentmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{312F1415-6A4D-D85E-EB94-83458466563D}|Assembly-CSharp.csproj|c:\\users\\tinos\\missile simulator\\assets\\scripts\\cameracontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{312F1415-6A4D-D85E-EB94-83458466563D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\cameracontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,37 +14,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "CameraController.cs",
-              "DocumentMoniker": "C:\\Users\\tinos\\Missile Simulator\\Assets\\Scripts\\CameraController.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\CameraController.cs",
-              "ToolTip": "C:\\Users\\tinos\\Missile Simulator\\Assets\\Scripts\\CameraController.cs",
-              "RelativeToolTip": "Assets\\Scripts\\CameraController.cs",
-              "ViewState": "AQIAAAEAAAAAAAAAAAAAAAsAAAB0AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-21T16:42:41.92Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "EnvironmentManager.cs",
-              "DocumentMoniker": "C:\\Users\\tinos\\Missile Simulator\\Assets\\Scripts\\EnvironmentManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\EnvironmentManager.cs",
-              "ToolTip": "C:\\Users\\tinos\\Missile Simulator\\Assets\\Scripts\\EnvironmentManager.cs",
-              "RelativeToolTip": "Assets\\Scripts\\EnvironmentManager.cs",
-              "ViewState": "AQIAAB8AAAAAAAAAAAAgwC4AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-21T13:30:43.246Z",
-              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -66,22 +28,9 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\Missile.cs",
               "ToolTip": "C:\\Users\\tinos\\Missile Simulator\\Assets\\Scripts\\Missile.cs",
               "RelativeToolTip": "Assets\\Scripts\\Missile.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAtAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-20T22:12:19.683Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "WindArea.cs",
-              "DocumentMoniker": "C:\\Users\\tinos\\Missile Simulator\\Assets\\Scripts\\WindArea.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\WindArea.cs",
-              "ToolTip": "C:\\Users\\tinos\\Missile Simulator\\Assets\\Scripts\\WindArea.cs",
-              "RelativeToolTip": "Assets\\Scripts\\WindArea.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAcAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-20T11:25:13.961Z",
               "EditorCaption": ""
             }
           ]
